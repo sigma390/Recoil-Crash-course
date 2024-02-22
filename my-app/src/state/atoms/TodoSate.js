@@ -1,6 +1,8 @@
 import {atom} from 'recoil'
-const todoState  =atom({
+
+
+export const todoState  =atom({
     key:'todoState',
-    default:[]; //initially empty array
+    default:[], //initially empty array
 
 })
