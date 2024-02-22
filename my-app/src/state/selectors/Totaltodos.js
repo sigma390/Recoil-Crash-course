@@ -3,10 +3,10 @@ import { todoState } from "../atoms/TodoSate";
 
 
 export const totalTodos = selector({
-    key: 'charCountState', // unique ID (with respect to other atoms/selectors)
+    key: 'totalTodos', // unique ID (with respect to other atoms/selectors)
     get: ({get}) => {
-      const text = get(todoState);
+      const ts= get(todoState);
   
-      return text.length;
+      return ts.length;
     },
   });
