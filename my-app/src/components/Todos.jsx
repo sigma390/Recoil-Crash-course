@@ -14,6 +14,9 @@ const Todos = () => {
   function handleInput(e){
      setInput(e.target.value);
   }
+  function ClearTodos(){
+    setTodos([]);
+  }
 
   console.log(todos)
 
@@ -24,7 +27,7 @@ const Todos = () => {
         <input value={inputText} onChange={handleInput}
          type="text" id='todoInput' />
         <button onClick={addTodo}>Add</button>
-        <button>Delete</button>
+        <button onClick={ClearTodos}>Delete</button>
     </main>
   )
 }
