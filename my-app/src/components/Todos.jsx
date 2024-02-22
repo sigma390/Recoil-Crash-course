@@ -8,12 +8,14 @@ const Todos = () => {
   function addTodo(){
     setTodos((prevTodos)=>[...prevTodos,
       {id:Math.random(),text:inputText}])
+    setInput('');
   }
 
   function handleInput(e){
      setInput(e.target.value);
   }
-  console.log(inputText)
+
+  console.log(todos)
 
 
   return (
@@ -21,7 +23,7 @@ const Todos = () => {
     <main>
         <input value={inputText} onChange={handleInput}
          type="text" id='todoInput' />
-        <button>Add</button>
+        <button onClick={addTodo}>Add</button>
         <button>Delete</button>
     </main>
   )
